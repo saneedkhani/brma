@@ -1,0 +1,38 @@
+{
+ "arms": [
+  "C",
+  "K3",
+  "K3H",
+  "K5",
+  "S3H",
+  "S5"
+ ],
+ "branch": [
+  "NONE",
+  "BRMA",
+  "BRMA-M",
+  "BRMA-C",
+  "ORACLE"
+ ],
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  42
+ ],
+ "alpha": 0.05,
+ "tests": [
+  "T15 BRMA-M non-inferior to BRMA on H at K3H (0.01)",
+  "T16 BRMA-M<NONE H K3H",
+  "T17 BRMA-M<NONE H S3H",
+  "T18 clean macro-F1 BRMA-M non-inferior NONE (0.02)"
+ ]
+}

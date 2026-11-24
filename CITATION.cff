@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the paper."
+title: "Removing Persistent Label Poisoning from Replay Memory in Federated Class-Incremental Intrusion Detection with a Conformal Benign-Reference Audit"
+authors:
+  - name: "Saneedullah"
+    affiliation: "FAST National University of Computer and Emerging Sciences"
+  - family-names: "Bilal"
+    given-names: "Ahmed"
+    affiliation: "FAST National University of Computer and Emerging Sciences"
+year: 2026
+license: MIT

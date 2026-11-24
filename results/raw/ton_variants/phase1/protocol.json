@@ -1,0 +1,34 @@
+{
+ "cfg": {
+  "rounds": 24,
+  "capacity": 2000,
+  "features": "ports"
+ },
+ "branch": [
+  "NONE",
+  "BRMA",
+  "LOSS",
+  "ORACLE",
+  "BRMA-M",
+  "BRMA-G",
+  "BRMA-C"
+ ],
+ "variants": [
+  "BRMA-M",
+  "BRMA-G",
+  "BRMA-C"
+ ],
+ "seeds": [
+  101,
+  102,
+  103
+ ],
+ "arms": [
+  "C",
+  "K3H",
+  "K5"
+ ],
+ "alpha": 0.05,
+ "gmm_components": 5,
+ "doc": "BRMA improvement study on TON_IoT (DDoS weakness). Imports ton_study.py unchanged.\n\nMemory actions after stages 2 and 3 (same points as BRMA):\n  NONE, BRMA (Gaussian likelihood ratio, original), LOSS (BRMA's budget + loss ranking), ORACLE,\n  BRMA-M  model-margin score  m(x) = max_{c != benign} z_c(x) - z_benign(x)  of the current global model,\n          conformal threshold at level alpha on the stage-1 benign calibration half;\n  BRMA-G  Gaussian-mixture benign model (5 components) against tied Ledoit-Wolf attack Gaussians,\n          log-likelihood ratio, conformal threshold at level alpha;\n  BRMA-C  union of the original BRMA test and the model-margin test, each at level alpha/2\n          (Bonferroni: false-removal rate still <= alpha).\nPhase 1 (selection): development seeds 101-103, arms C/K3H/K5, DEV split. Rule (fixed in advance): among BRMA-M/G/C, keep variants whose\n  clean false-removal rate <= alpha + 0.01 and clean dev macro-F1 >= NONE - 1 point; choose the lowest mean dev H over K3H and K5.\nPhase 2 (evaluation): fresh seeds 201-212, arms C/K1/K3/K3H/K5, TEST split, all methods.\nPre-specified tests (one-sided paired Wilcoxon, Holm over four), S = selected variant:\n  T11 S < BRMA on H at K3H;  T12 S < BRMA on H at K5;  T13 S < NONE on H at K3H;  T14 clean macro-F1 of S non-inferior to NONE (margin 2 points).\nUsage:  python ton_improve.py run --data DATA_PORTS --out OUT --seeds 101 102 103 --arms C K3H K5\n"
+}

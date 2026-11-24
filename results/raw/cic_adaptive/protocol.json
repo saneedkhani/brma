@@ -1,0 +1,82 @@
+{
+ "arms": {
+  "C": [
+   0,
+   0,
+   1,
+   "std"
+  ],
+  "K3H": [
+   3,
+   9,
+   10,
+   "std"
+  ],
+  "K5": [
+   5,
+   1,
+   2,
+   "std"
+  ],
+  "S3H": [
+   3,
+   9,
+   10,
+   "sel"
+  ],
+  "S5": [
+   5,
+   1,
+   2,
+   "sel"
+  ],
+  "M3H": [
+   3,
+   9,
+   10,
+   "mix"
+  ],
+  "M5": [
+   5,
+   1,
+   2,
+   "mix"
+  ]
+ },
+ "branch_methods": [
+  "NONE",
+  "BRMA",
+  "RAND",
+  "LOSS",
+  "ORACLE",
+  "LOSS5"
+ ],
+ "full_methods": [
+  "DC",
+  "MEDIAN"
+ ],
+ "alpha": 0.05,
+ "gamma": 0.5,
+ "fixed_fraction": 0.05,
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  42
+ ],
+ "tests": [
+  "T7 BRMA<NONE H S3H",
+  "T8 BRMA<NONE H M3H",
+  "T9 BRMA<LOSS5 H K3H",
+  "T10 BRMA<LOSS5 H S3H"
+ ],
+ "engine": "brma_study.py engine unchanged"
+}

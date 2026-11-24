@@ -1,0 +1,85 @@
+{
+ "csv": "/kaggle/input/datasets/fadiabuzwayed/ton-iot-train-test-network/TON_IoT_Train_Test_Network.csv",
+ "raw_rows": 461043,
+ "duplicate_rows_removed": 274181,
+ "rows": 186862,
+ "feature_vectors_shared_by_two_classes": 647,
+ "features": 163,
+ "dropped_columns": [
+  "dns_query",
+  "http_uri"
+ ],
+ "arrival": {
+  "normal": 1,
+  "scanning": 1,
+  "dos": 1,
+  "ddos": 2,
+  "password": 2,
+  "backdoor": 2,
+  "injection": 3,
+  "xss": 3,
+  "ransomware": 4,
+  "mitm": 4
+ },
+ "target": "ddos",
+ "counts": {
+  "normal": {
+   "train": 81890,
+   "dev": 17547,
+   "test": 17549
+  },
+  "scanning": {
+   "train": 3145,
+   "dev": 673,
+   "test": 675
+  },
+  "dos": {
+   "train": 4512,
+   "dev": 967,
+   "test": 968
+  },
+  "ddos": {
+   "train": 8284,
+   "dev": 1775,
+   "test": 1776
+  },
+  "password": {
+   "train": 10673,
+   "dev": 2287,
+   "test": 2288
+  },
+  "backdoor": {
+   "train": 1376,
+   "dev": 294,
+   "test": 296
+  },
+  "injection": {
+   "train": 13894,
+   "dev": 2977,
+   "test": 2978
+  },
+  "xss": {
+   "train": 6117,
+   "dev": 1310,
+   "test": 1312
+  },
+  "ransomware": {
+   "train": 182,
+   "dev": 39,
+   "test": 39
+  },
+  "mitm": {
+   "train": 727,
+   "dev": 155,
+   "test": 157
+  }
+ },
+ "train_rows_per_stage": {
+  "1": 28130,
+  "2": 40806,
+  "3": 40483,
+  "4": 21381
+ },
+ "destination_port_features": false,
+ "scaling": "signed log1p for numeric columns, one-hot for <=50 categories, z-score with train statistics, clip +-10"
+}

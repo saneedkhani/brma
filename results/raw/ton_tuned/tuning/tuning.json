@@ -1,0 +1,260 @@
+{
+ "selection": "highest mean dev macro-F1 over development seeds 101-103 (clean, no defence) among settings costing <= 3.0x the base run time; test split not used",
+ "best": {
+  "config": "ports__r24_mem2000",
+  "cfg": {
+   "rounds": 24,
+   "capacity": 2000,
+   "features": "ports"
+  },
+  "seeds": 3,
+  "dev_macro_f1": 0.8759952822735997,
+  "dev_sd": 0.04853126846820085,
+  "minutes": 2.217310282494446,
+  "cost_vs_base": 1.993111199127074
+ },
+ "table": [
+  {
+   "config": "ports__ep2_mem5000_wide_lr2e-3",
+   "cfg": {
+    "epochs": 2,
+    "capacity": 5000,
+    "hidden": [
+     256,
+     128
+    ],
+    "learning_rate": 0.002,
+    "features": "ports"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8804318562360763,
+   "dev_sd": 0.0478730844761108,
+   "minutes": 3.3538156948555575,
+   "cost_vs_base": 3.0147010429702927
+  },
+  {
+   "config": "ports__ep2_mem2000_wide",
+   "cfg": {
+    "epochs": 2,
+    "capacity": 2000,
+    "hidden": [
+     256,
+     128
+    ],
+    "features": "ports"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8783342624897289,
+   "dev_sd": 0.04993105569371521,
+   "minutes": 3.714871234861111,
+   "cost_vs_base": 3.3392491434203455
+  },
+  {
+   "config": "ports__r24_mem2000",
+   "cfg": {
+    "rounds": 24,
+    "capacity": 2000,
+    "features": "ports"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8759952822735997,
+   "dev_sd": 0.04853126846820085,
+   "minutes": 2.217310282494446,
+   "cost_vs_base": 1.993111199127074
+  },
+  {
+   "config": "ports__mem5000_wide",
+   "cfg": {
+    "capacity": 5000,
+    "hidden": [
+     256,
+     128
+    ],
+    "features": "ports"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8752803291357076,
+   "dev_sd": 0.04687872765313503,
+   "minutes": 1.8675088357722227,
+   "cost_vs_base": 1.6786792558680628
+  },
+  {
+   "config": "ports__mem2000_wide",
+   "cfg": {
+    "capacity": 2000,
+    "hidden": [
+     256,
+     128
+    ],
+    "features": "ports"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8723673751775385,
+   "dev_sd": 0.05353853767164789,
+   "minutes": 1.8409854387888887,
+   "cost_vs_base": 1.6548377213820076
+  },
+  {
+   "config": "ports__mem2000",
+   "cfg": {
+    "capacity": 2000,
+    "features": "ports"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8549372405979679,
+   "dev_sd": 0.06011618834809641,
+   "minutes": 1.1372549594833319,
+   "cost_vs_base": 1.0222636019434566
+  },
+  {
+   "config": "ports__ep2_mem2000_wide_weighted",
+   "cfg": {
+    "epochs": 2,
+    "capacity": 2000,
+    "hidden": [
+     256,
+     128
+    ],
+    "class_weight": true,
+    "features": "ports"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8514268570713849,
+   "dev_sd": 0.043350399657727474,
+   "minutes": 3.5600987085055547,
+   "cost_vs_base": 3.200126144698933
+  },
+  {
+   "config": "ports__base",
+   "cfg": {
+    "features": "ports"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8446626176715832,
+   "dev_sd": 0.062182825906919356,
+   "minutes": 1.1373714137111102,
+   "cost_vs_base": 1.022368281124987
+  },
+  {
+   "config": "base__ep2_mem5000_wide_lr2e-3",
+   "cfg": {
+    "epochs": 2,
+    "capacity": 5000,
+    "hidden": [
+     256,
+     128
+    ],
+    "learning_rate": 0.002,
+    "features": "base"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8225082953913185,
+   "dev_sd": 0.07956960983954617,
+   "minutes": 3.485629465927779,
+   "cost_vs_base": 3.133186716985957
+  },
+  {
+   "config": "base__ep2_mem2000_wide",
+   "cfg": {
+    "epochs": 2,
+    "capacity": 2000,
+    "hidden": [
+     256,
+     128
+    ],
+    "features": "base"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8207892944986285,
+   "dev_sd": 0.07126653162796738,
+   "minutes": 3.6101927252555566,
+   "cost_vs_base": 3.2451550008684746
+  },
+  {
+   "config": "base__ep2_mem2000_wide_weighted",
+   "cfg": {
+    "epochs": 2,
+    "capacity": 2000,
+    "hidden": [
+     256,
+     128
+    ],
+    "class_weight": true,
+    "features": "base"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.8095621851735134,
+   "dev_sd": 0.06840835599321993,
+   "minutes": 3.446127332083331,
+   "cost_vs_base": 3.097678765763987
+  },
+  {
+   "config": "base__mem2000_wide",
+   "cfg": {
+    "capacity": 2000,
+    "hidden": [
+     256,
+     128
+    ],
+    "features": "base"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.7799382419314272,
+   "dev_sd": 0.08716259224964129,
+   "minutes": 1.7305817123555558,
+   "cost_vs_base": 1.555597256338889
+  },
+  {
+   "config": "base__r24_mem2000",
+   "cfg": {
+    "rounds": 24,
+    "capacity": 2000,
+    "features": "base"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.7798982227944036,
+   "dev_sd": 0.07936725049361962,
+   "minutes": 2.158457521905556,
+   "cost_vs_base": 1.9402092227301124
+  },
+  {
+   "config": "base__mem5000_wide",
+   "cfg": {
+    "capacity": 5000,
+    "hidden": [
+     256,
+     128
+    ],
+    "features": "base"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.7722003141459375,
+   "dev_sd": 0.07209610568957939,
+   "minutes": 1.813810127683333,
+   "cost_vs_base": 1.6304101898218724
+  },
+  {
+   "config": "base__mem2000",
+   "cfg": {
+    "capacity": 2000,
+    "features": "base"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.6836290447571153,
+   "dev_sd": 0.12951454759697328,
+   "minutes": 1.0931945779777785,
+   "cost_vs_base": 0.9826583015442104
+  },
+  {
+   "config": "base__base",
+   "cfg": {
+    "features": "base"
+   },
+   "seeds": 3,
+   "dev_macro_f1": 0.6625920970312034,
+   "dev_sd": 0.11171770936256425,
+   "minutes": 1.1124869919277784,
+   "cost_vs_base": 1.0
+  }
+ ]
+}
